@@ -1,6 +1,11 @@
 from pydantic import BaseModel, ValidationError, Field
 from helpers_functions import print_description
 
+"""
+For more info about Fields check pydantic's documentation:
+https://docs.pydantic.dev/latest/concepts/fields/
+"""
+
 class Person(BaseModel):
     name: str = Field(max_length=20, min_length=2)
     # gt stands for greater than
