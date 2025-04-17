@@ -25,7 +25,7 @@ class User(BaseModel):
 
 if __name__ == "__main__":
     user_info = {
-        "name": fake.name(),
+        "name": fake.name().lower(),
         "password": fake.password()
     }
     print_description("User information before being passed to User model")
