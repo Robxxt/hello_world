@@ -10,3 +10,6 @@ This task may require quite some effort.
 - You will need to get the first 12 pokemons from the list,
 parse them into the Pokemon model and save them in a json file locally.
 
+url: https://pokeapi.co/api/v2/pokemon/
+
+"""
