@@ -15,6 +15,7 @@ class User(BaseModel):
     @field_validator('name')
     def title_name(cls, value):
         return value.title()
+
     @field_validator('password')
     def hash_password(cls, value):
         hash_object = hashlib.sha256()
@@ -22,11 +23,12 @@ class User(BaseModel):
         hashed_string = hash_object.hexdigest()
         return hashed_string
 
-user_info = {
-    "name": fake.name(),
-    "password": fake.password()
-}
-print_description("User information before being passed to User model")
-print(user_info)
-print_description("Final look of User model")
-handle_model(User, **user_info)
+if __name__ == "__main__":
+    user_info = {
+        "name": fake.name(),
+        "password": fake.password()
+    }
+    print_description("User information before being passed to User model")
+    print(user_info)
+    print_description("Final look of User model")
+    handle_model(User, **user_info)
