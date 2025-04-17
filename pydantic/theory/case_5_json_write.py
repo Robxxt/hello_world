@@ -17,7 +17,7 @@ class UserExpanded(User):
 if __name__ == "__main__":
     user_list_information = [
         {
-        "name": fake.name(),
+        "name": fake.name().lower(),
         "password": fake.password(),
         "irrelevant info": fake.text(),
         "user email": fake.email(),
